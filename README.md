@@ -61,5 +61,37 @@ This project (`pyspark-movie-reviews`), is built to process, clean, analyze, and
 
 1. **Clone the repository** and place `IMDB_Dataset.csv` inside the project root folder:
    ```bash
-   git clone [https://github.com/](https://github.com/)<YOUR_USERNAME>/pyspark-movie-reviews.git
+   git clone https://github.com/<YOUR_USERNAME>/pyspark-movie-reviews.git
    cd pyspark-movie-reviews
+   ```
+
+2. **Create and activate a virtual environment:**
+   ```bash
+   python -m venv .venv
+   ```
+   * **Windows (PowerShell):**
+     ```powershell
+     .venv\Scripts\Activate.ps1
+     ```
+   * **macOS / Linux:**
+     ```bash
+     source .venv/bin/activate
+     ```
+
+3. **Install the required dependencies:**
+   ```bash
+   pip install pyspark "pandas>=2.0" pyarrow
+   ```
+
+4. **Run the PySpark analysis script:**
+   ```bash
+   python main.py
+   ```
+
+## Output
+After running the script, the terminal displays the DataFrame schema, sample rows, total valid review counts, sentiment breakdown (`positive` vs. `negative`), and reviews exceeding 500 characters. The cleaned and transformed dataset is exported to `result_imdb_dataset.csv` in the project directory.
+
+## Execution Screenshots
+
+1. Initial Setup & Schema Check (test_pyspark.py)
+2. Full Pipeline Execution & Results (main.py)
