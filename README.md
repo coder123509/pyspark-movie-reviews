@@ -61,7 +61,7 @@ This project (`pyspark-movie-reviews`), is built to process, clean, analyze, and
 
 1. **Clone the repository** and place `IMDB_Dataset.csv` inside the project root folder:
    ```bash
-   git clone https://github.com/<YOUR_USERNAME>/pyspark-movie-reviews.git
+   git clone https://github.com/coder123509/pyspark-movie-reviews.git
    cd pyspark-movie-reviews
    ```
 
