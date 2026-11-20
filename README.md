@@ -1,0 +1,65 @@
+# PySpark IMDb Movie Reviews Analysis
+
+This project (`pyspark-movie-reviews`), is built to process, clean, analyze, and transform the IMDb 50K Movie Reviews dataset using Apache Spark (PySpark).
+
+---
+
+## Assignment Problem Statement
+
+**Objective:** Create a GitHub account and commit basic PySpark code that processes a movie review dataset.
+
+### Setup & Repository Requirements
+* Create a public GitHub repository named `pyspark-movie-reviews`
+* Download the Movie Review Dataset from Kaggle: [IMDb Dataset of 50K Movie Reviews](https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews)
+* Complete the PySpark tasks and push the code to the repository
+
+### Data Processing Tasks
+1. **Load the Dataset:** Use PySpark to read the CSV file into a DataFrame.
+2. **Explore the Data:**
+   * Print the schema of the DataFrame.
+   * Display the first 5 rows.
+3. **Clean the Data:** Remove any rows with null or empty reviews.
+4. **Analyze the Data:**
+   * Count the total number of reviews.
+   * Count how many reviews are labeled positive and negative.
+5. **Transform the Data:**
+   * Create a new column that stores the length of each review (number of characters).
+   * Filter and display reviews where the review length is greater than 500 characters.
+6. **Save Your Results:** Save the cleaned and transformed DataFrame as a new CSV file.
+
+---
+
+## Dataset & Output Files
+
+* **Raw Input Dataset:** `IMDB_Dataset.csv` (from [Kaggle](https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews), excluded from Git via `.gitignore` due to file size).
+* **Processed Output Dataset (`result_imdb_dataset.csv`):** The final cleaned and transformed CSV file containing the added `review_length` column is hosted on Google Drive:  
+  👉 **[Download `result_imdb_dataset.csv` (Google Drive)](<PASTE_YOUR_GOOGLE_DRIVE_LINK_HERE>)**
+
+---
+
+## Repository Contents
+
+* `main.py` — Full PySpark pipeline covering data loading (with `multiLine=True` and `escape='"'` to handle embedded quotes/commas in reviews), null/empty string filtering, sentiment aggregation, character-length calculation, filtering (`> 500` characters), and CSV export.
+* `test_pyspark.py` — Initial environment test script verifying Apache Spark (`v4.0.1`) setup, CSV ingestion, and schema inference.
+* `images/` — Screenshots of terminal execution and query outputs.
+* `.gitignore` — Excludes large `.csv` files, `.venv/`, and `__pycache__/`.
+
+---
+
+## Key Results Summary
+
+* **Schema:** `review` (`string`, nullable) and `sentiment` (`string`, nullable)
+* **Total Valid Reviews:** `50,000`
+* **Sentiment Breakdown:**
+  * `positive`: `25,000`
+  * `negative`: `25,000`
+* **Transformation & Filtering:** Computed character length per review (`review_length`) and filtered reviews exceeding `500` characters.
+
+---
+
+## How to Run Locally
+
+1. **Clone the repository** and place `IMDB_Dataset.csv` inside the project root folder:
+   ```bash
+   git clone [https://github.com/](https://github.com/)<YOUR_USERNAME>/pyspark-movie-reviews.git
+   cd pyspark-movie-reviews
