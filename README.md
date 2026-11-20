@@ -1,4 +1,4 @@
-# PySpark IMDb Movie Reviews Analysis
+# PySpark IMDb Movie Reviews Analysis- Data and Storytelling course, RVCE 7th Semester 2026
 
 This project (`pyspark-movie-reviews`), is built to process, clean, analyze, and transform the IMDb 50K Movie Reviews dataset using Apache Spark (PySpark).
 
