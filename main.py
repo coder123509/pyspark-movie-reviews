@@ -1,14 +1,14 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, length, trim
 
-# 1. Initialize SparkSession
+# 1. Initializing SparkSession in the local server
 spark = (
     SparkSession.builder.appName("IMDbMovieReviewsAnalysis")
     .master("local[*]")
     .getOrCreate()
 )
 
-# Optional: Reduce verbose Spark INFO logs so your output is easier to read
+# Optional: Reducing verbose Spark INFO logs so that the output is easier to read
 spark.sparkContext.setLogLevel("ERROR")
 
 # ---------------------------------------------------------
